@@ -24,7 +24,7 @@ var findArt = conn.findArt;
 
 /* GET login page. */
 router.get('/', function(req, res, next) {
-  var val = req.query.search.toString();
+  var val = req.query.search;
   findArt('ulist',function(data){
     res.render('article', {'list':data[0]});
     console.log(data)

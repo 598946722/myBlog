@@ -5,7 +5,9 @@ var find = conn.find;
 
 /* GET login page. */
 router.get('/', function(req, res, next) {
-  res.render('login', { title: 'This is Test' , text:'haahha'});
+ // res.cookie('uname','upwd',{expires:new Date(Date.now() + 10000),httpOnly:true})
+ 
+ res.render('login', { title: 'This is Test' , text:'haahha'});
 });
 
 router.post('/',function(req,res,next){

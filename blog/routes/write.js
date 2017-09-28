@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 router.post('/',function(req,res){
   insert('ulist',function(data){
     res.send(data);
-  },{'artTit':req.body.artTit,'artDes':req.body.artDes,'artAuthor':req.body.artAuthor,'artDate':req.body.artDate,'artCount':req.body.artCount,'artCon':req.body.artCon})})
+  },{'artTit':req.body.artTit,'artDes':req.body.artDes,'artAuthor':req.body.artAuthor,'artDate':req.body.artDate,'artCount':req.body.artCount,'artCon':req.body.artCon,'artPic':req.body.artPic})})
 
 
 module.exports = router;

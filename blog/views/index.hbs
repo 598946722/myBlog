@@ -1,13 +1,9 @@
 	    <aside>
 	    	<h3>归档</h3>
 	    	<ul>
-	    		<li><a href="">2012年02月</a></li>
-	    		<li><a href="">2012年03月</a></li>
-	    		<li><a href="">2012年04月</a></li>
-	    		<li><a href="">2012年05月</a></li>
-				<li><a href="">2012年06月</a></li>
-				<li><a href="">2012年07月</a></li>
-    	        <li><a href="">2012年08月</a></li>
+	    		{{#each list}}
+					<li><a href="">{{artDate}}</a></li>					
+				{{/each}}
 	    	</ul>
 	    	<div class="loginNow fr">
 	    		立即登录
@@ -23,7 +19,11 @@
 		        {{#each list}}
 				<li>
 					<a class="img" href="/article/?search={{artTit}}">
+					{{#if artPic}}
+						<img src="{{artPic}}" alt="{{artTit}}">
+					{{else}}
 						<img src="images/upload/test.png" alt="{{artTit}}">
+					{{/if}}
 					</a>	
 					<div class="artDetail">
 						<h4 class="artTit">{{artTit}}</h4>
